@@ -2,7 +2,7 @@ Rails.application.routes.draw do
  
   # get 'users/register'
 
-  # get 'todos/todo_app'
+  get 'todos#todo_app'
 
    match 'todos/todo_app', :to => 'todos#todo_app', :via => :get
    match 'todos/create', :to => 'todos#create', :via => :post
