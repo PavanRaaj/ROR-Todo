@@ -1,0 +1,34 @@
+<table >
+<tr>
+<th></th>
+<th class="task_heading">Task</th>
+<th class="date_heading">Date</th>
+<th class="status_heading">Status</th>
+<th class="delete_heading">Delete</th>
+</tr>
+<% for i in 0...@todo_list.length %>
+
+<tr>
+<td></td>
+<td><%= @todo_list[i].task%></td>
+
+<td class="date_listing"><%= @todo_list[i].date%></td>
+
+<% if @todo_list[i].status == false || @todo_list[i].status == 'null' %>
+    <td><a href="/todos/update/ <%= @todo_list[i].id%>"><button class="status_before_complete">Mark as Complete</button></a></td>
+<% else %>
+     <td><button class="status_after_complete" >Completed</button></td>
+<% end %>
+
+<td class="delete_td"><%= link_to "Delete", "/delete/#{@todo_list[i].id}" ,data: {confirm: 'Are you sure ?'} ,class: "delete_button" %></td>
+</tr>
+<%end%>
+</table>
+
+<%# <script>
+function del(id) {
+    // alert("You Cannot Undo This...");
+    window.location.href = "/delete/"+id;
+}
+</script> %>
+

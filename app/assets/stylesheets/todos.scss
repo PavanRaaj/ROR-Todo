@@ -1,0 +1,140 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body{
+    background-image: url("background.jpg");
+}
+
+.main_container{
+ background-color: white;
+ height: 180px;
+ width: 470px;
+ margin-left: 630px;
+ margin-top: 300px;
+ padding-left: 60px;
+ padding-top: 100px;
+ border-radius: 30px;
+}
+.tittle_card{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: inherit;
+    font-weight: bold;
+    padding-left: 100px;
+    margin-top: -90px;
+}
+input{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.add_task_button{
+    height: 40px;
+    width: 110px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 150px;
+    background-color: rgb(27, 203, 219);
+}
+.add_task_button:hover{
+    background-color: rgb(25, 187, 202);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+label{
+   font-size: 25px;
+   font-weight: bold;
+   padding-right: 10px;
+}
+
+// listing page 
+.task_heading{
+    font-size: 23px;
+    font-weight: bold;
+}
+.date_heading{
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 300px;
+}
+.date_listing{
+    margin-left: 300px;
+}
+.status_heading{
+    font-size: 23px;
+    font-weight: bold;
+}
+.delete_heading{
+    font-size: 23px;
+    font-weight: bold;
+}
+.delete_td{
+    padding-top: 30px;
+}
+.delete_button{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px;
+    background-color: rgb(240, 9, 9);
+    text-decoration: none;
+}
+.delete_button:hover{
+    background-color: white;
+    color: black;
+}
+.status_before_complete{
+    height: 40px;
+    width: 210px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 150px;
+    background-color: rgb(245, 153, 33);
+}
+.status_before_complete:hover{
+    background-color: white;
+    color: black;
+}
+.status_after_complete{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 150px;
+    background-color: rgb(156, 248, 8);
+}
+.status_after_complete:hover{
+    background-color: none;
+    color: none;
+}
+
+// .todo_show{
+
+// }
+
+// .todo_show h1{
+
+// }
+
+// .todo_show h1{
+    
+// }
