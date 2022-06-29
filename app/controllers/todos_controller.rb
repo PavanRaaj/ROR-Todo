@@ -19,7 +19,8 @@ class TodosController < ApplicationController
    @del = Todo.find(params[:id])
    if @del.destroy
     @todo_list=Todo.all
-    render "todos/list" 
+    # render "todos/list" 
+    redirect_to root_path
    end
   end
 
