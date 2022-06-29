@@ -43,10 +43,28 @@ input{
     border: none;
     border-radius: 10px;
     margin-top: 20px;
-    margin-left: 150px;
+    margin-left: 80px;
     background-color: rgb(27, 203, 219);
 }
 .add_task_button:hover{
+    background-color: rgb(25, 187, 202);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.list_task_button{
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: rgb(27, 203, 219);
+}
+.list_task_button:hover{
     background-color: rgb(25, 187, 202);
     color: rgb(255, 255, 255);
     cursor: pointer;
@@ -58,73 +76,167 @@ label{
 }
 
 // listing page 
+.Adding_task_link{
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+    margin-top: 70px;
+    margin-left: 700px;
+}
+.Title{
+    font-size: 50px;
+    font-family: sans-serif;
+    margin-left: 42%;
+    letter-spacing: 1px;
+}
+.title_elements {
+    margin-top: 8%;
+}
+.main_container_of_list{
+    margin-left: 22%;
+    position: relative;
+    padding: 25px;
+    background-color: white;
+    max-width: 1000px;
+    max-height: 320px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    overflow: scroll;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.main_container_of_list::-webkit-scrollbar{
+    display: none;
+}
+.task_listing{
+    position: relative;
+    /* left: 0px; */
+    font-size: 20px;
+    width: 300px;
+    padding-left: 6%;
+    /* margin-left: 60px; */
+    // background-color: yellow;
+}
+.date_listing{
+    position: relative;
+    //left: 0px; 
+    font-size: 20px;
+    width: 310px;
+    margin-left: 70px; 
+    // background-color: yellow;
+    padding-left: 6%;
+}
+#heading_elements{
+    // position: relative;
+    margin-top: 6%;
+    margin-left: 22%;
+    padding-top: 20px;
+    background-color: white;
+    max-width: 1050px;
+    border-radius: 10px 10px 0 0;
+}
+// #heading_background{
+//     position: absolute;
+//     background-color: white;
+//     height: 50px;
+//     width: 1050px;
+//     left: 400px;
+//     border-radius: 10px;
+// }
 .task_heading{
-    font-size: 23px;
+    // position: relative;
+    // top: 170px;
+    margin-left: 9%;
+    font-size: 30px;
     font-weight: bold;
 }
 .date_heading{
-    font-size: 23px;
+    // position: absolute;
+    // top: 170px;
+    margin-left: 220px;
+    font-size: 30px;
     font-weight: bold;
-    margin-left: 300px;
-}
-.date_listing{
-    margin-left: 300px;
 }
 .status_heading{
-    font-size: 23px;
+//     // position: absolute;
+    // top: 170px;
+    margin-left: 160px;
+    font-size: 30px;
     font-weight: bold;
+
 }
 .delete_heading{
-    font-size: 23px;
+//     top: 170px;
+//     left: 1305px;
+   margin-left: 95px;
+    font-size: 30px;
     font-weight: bold;
+   
 }
 .delete_td{
+    position: relative;
+    // top: 50px;
     padding-top: 30px;
 }
 .delete_button{
+    position: relative;
     font-size: 20px;
     color: white;
-    font-weight: bold;
-    border-radius: 10px;
+    font-weight: 600;
+    border-radius: 8px;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 80%;
     padding: 10px;
-    background-color: rgb(240, 9, 9);
+    background-color: #EC7063;
     text-decoration: none;
+    cursor: pointer;
 }
 .delete_button:hover{
-    background-color: white;
-    color: black;
+    background-color: #F1948A;
+    color: white;
 }
 .status_before_complete{
+    // position: relative;
+    // top: 50px;
     height: 40px;
     width: 210px;
     font-size: 20px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    border-radius: 10px;
+    color: #F0F3F4;
+    font-weight: 800;
+    border-radius: 8px;
     margin-top: 20px;
-    margin-left: 150px;
-    background-color: rgb(245, 153, 33);
+    border: none;
+    background-color: #85C1E9  ;
+    cursor: pointer;
 }
 .status_before_complete:hover{
-    background-color: white;
-    color: black;
+    background-color: #AED6F1 ;
+    color: white;
 }
 .status_after_complete{
+    position: relative;
+    // top: 50px;
+    // left: 220px;
     height: 40px;
     width: 150px;
     font-size: 20px;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: none;
     margin-top: 20px;
-    margin-left: 150px;
-    background-color: rgb(156, 248, 8);
+    margin-right: 60px;
+    margin-left: 12%;
+    background-color: #82E0AA;
+    cursor:not-allowed
 }
 .status_after_complete:hover{
     background-color: none;
     color: none;
+}
+.add_tasks_button_in_list_page{
+    color:blue;
 }
 
 // .todo_show{

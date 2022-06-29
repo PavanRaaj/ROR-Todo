@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   root 'todos#todo_app'
 
-  #  match 'todos/todo_app', :to => 'todos#todo_app', :via => :get
+   match 'todos/todo_app', :to => 'todos#todo_app', :via => :get
+   match 'todos/list', to: "todos#list", via: :get, as: :lists
    match 'todos/create', :to => 'todos#create', :via => :post
    get '/delete/:id' => 'todos#delete', as: :delete
    match 'todos/update/:id', to: 'todos#update', via:  :get

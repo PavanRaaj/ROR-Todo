@@ -19,16 +19,19 @@ class TodosController < ApplicationController
    @del = Todo.find(params[:id])
    if @del.destroy
     @todo_list=Todo.all
-    # render "todos/list" 
-    redirect_to root_path
+    redirect_to lists_path 
    end
+  end
+
+  def list
+    @todo_list = Todo.all
   end
 
   def create
     todo = Todo.new( todo_params )
     if  todo.save
     @todo_list = Todo.all
-    render "todos/list"
+    redirect_to lists_path 
     end
   end
 
@@ -38,7 +41,7 @@ class TodosController < ApplicationController
     todo.status = true 
     if todo.save
     @todo_list = Todo.all
-    render "todos/list"
+    redirect_to lists_path 
     end
   end
 

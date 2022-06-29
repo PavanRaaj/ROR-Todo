@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_24_134802) do
+ActiveRecord::Schema.define(version: 2022_06_29_120248) do
 
   create_table "todos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "task"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2022_06_24_134802) do
     t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["task"], name: "index_todos_on_task", unique: true
   end
 
 end

@@ -3,4 +3,10 @@ class Todo < ApplicationRecord
     #      is_completed = status ? "[X]" : "[ ]"
     #     "#{id}. #{task} #{date} "
     # end
+
+
+
+    # def to_s 
+    #     "#{}"
+    # end
 end

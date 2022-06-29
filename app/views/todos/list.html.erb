@@ -1,16 +1,25 @@
+<div class="title_elements">
+<span class="Title"> Your Tasks </span>
+</div>
+<div id="heading_elements">
+<span class="task_heading">Task</span>
+<span class="date_heading">Task Date</span>
+<span class="status_heading">Task Status</span>
+<span class="delete_heading">Delete</span>
+</div>
+
+
+
+<div class="main_container_of_list">
 <table >
-<tr>
-<th></th>
-<th class="task_heading">Task</th>
-<th class="date_heading">Date</th>
-<th class="status_heading">Status</th>
-<th class="delete_heading">Delete</th>
-</tr>
+
+
+
 <% for i in 0...@todo_list.length %>
 
 <tr>
-<td></td>
-<td><%= @todo_list[i].task%></td>
+
+<td class="task_listing"><%= @todo_list[i].task%></td>
 
 <td class="date_listing"><%= @todo_list[i].date%></td>
 
@@ -24,6 +33,12 @@
 </tr>
 <%end%>
 </table>
+</div>
+
+<div class="Adding_task_link">
+<p> Want To Add a Task ? <a href="/todos/todo_app" class="add_tasks_button_in_list_page"> Click here.. </a>
+</div>
+
 
 <%# <script>
 function del(id) {
