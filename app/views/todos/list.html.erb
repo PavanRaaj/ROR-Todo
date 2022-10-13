@@ -1,49 +1,46 @@
 <div class="title_elements">
-<span class="Title"> Your Tasks </span>
+  <span class="Title"> Your Tasks </span>
 </div>
 <div id="heading_elements">
-<span class="task_heading">Task</span>
-<span class="date_heading">Task Date</span>
-<span class="status_heading">Task Status</span>
-<span class="delete_heading">Delete</span>
+  <span class="task_heading">Task</span>
+  <span class="date_heading">Task Date</span>
+  <span class="status_heading">Task Status</span>
+  <span class="delete_heading">Delete</span>
 </div>
 
-
-
 <div class="main_container_of_list">
-<table >
+  <table>
+    <% for i in 0...@todo_list.length %>
 
+    <tr>
+      <td class="task_listing"><%= @todo_list[i].task%></td>
 
+      <td class="date_listing"><%= @todo_list[i].date%></td>
 
-<% for i in 0...@todo_list.length %>
+      <% if @todo_list[i].status == false || @todo_list[i].status == 'null' %>
+      <td>
+        <a href="/todos/update/ <%= @todo_list[i].id%>"
+          ><button class="status_before_complete">Mark as Complete</button></a
+        >
+      </td>
+      <% else %>
+      <td><button class="status_after_complete">Completed</button></td>
+      <% end %>
 
-<tr>
-
-<td class="task_listing"><%= @todo_list[i].task%></td>
-
-<td class="date_listing"><%= @todo_list[i].date%></td>
-
-<% if @todo_list[i].status == false || @todo_list[i].status == 'null' %>
-    <td><a href="/todos/update/ <%= @todo_list[i].id%>"><button class="status_before_complete">Mark as Complete</button></a></td>
-<% else %>
-     <td><button class="status_after_complete" >Completed</button></td>
-<% end %>
-
-<td class="delete_td"><%= link_to "Delete", "/delete/#{@todo_list[i].id}" ,data: {confirm: 'Are you sure ?'} ,class: "delete_button" %></td>
-</tr>
-<%end%>
-</table>
+      <td class="delete_td">
+        <%= link_to "Delete", "/delete/#{@todo_list[i].id}" ,data: {confirm:
+        'Are you sure ?'} ,class: "delete_button" %>
+      </td>
+    </tr>
+    <%end%>
+  </table>
 </div>
 
 <div class="Adding_task_link">
-<p> Want To Add a Task ? <a href="/todos/todo_app" class="add_tasks_button_in_list_page"> Click here.. </a>
+  <p>
+    Want To Add a Task ?
+    <a href="/todos/todo_app" class="add_tasks_button_in_list_page">
+      Click here..
+    </a>
+  </p>
 </div>
-
-
-<%# <script>
-function del(id) {
-    // alert("You Cannot Undo This...");
-    window.location.href = "/delete/"+id;
-}
-</script> %>
-

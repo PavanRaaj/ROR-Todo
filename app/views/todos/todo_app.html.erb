@@ -3,16 +3,38 @@
 <p>Find me in app/views/todos/todo_app.html.erb</p>
 %>
 
-
 <div class="main_container">
-    <p class="tittle_card">To Do List</p>
+  <p class="tittle_card">To Do List</p>
 
   <form action="/todos/create" method="post">
-
-  <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
-   <label for="task">Task :</label> <input type="text" id="task" name="todo[task]" placeholder="Enter your task" required autofocus title="Please Enter Your Task"/> <br>
-    <label for="date">Date :</label><input type="date" id="date" name="todo[date]" placeholder="" title="Please Select The Date" required >
-    <button type="submit" id="submit" class="add_task_button">Add Task</button> <a href="todos/list"> <button class="list_task_button"> List my Tasks </button> </a>
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>"
+    />
+    <label for="task">Task :</label>
+    <input
+      type="text"
+      id="task"
+      name="todo[task]"
+      placeholder="Enter your task"
+      required
+      autofocus
+      title="Please Enter Your Task"
+    />
+    <br />
+    <label for="date">Date :</label
+    ><input
+      type="date"
+      id="date"
+      name="todo[date]"
+      placeholder=""
+      title="Please Select The Date"
+      required
+    />
+    <button type="submit" id="submit" class="add_task_button">Add Task</button>
+    <a href="todos/list">
+      <button class="list_task_button">List my Tasks</button>
+    </a>
   </form>
 </div>
-
